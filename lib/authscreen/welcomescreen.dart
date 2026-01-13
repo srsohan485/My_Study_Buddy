@@ -2,9 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:mystudybuddy/authscreen/loginscreen.dart';
 import 'package:mystudybuddy/authscreen/singupscreen.dart';
 
+import 'dropdownpage.dart';
 
-class Welcomescreen extends StatelessWidget {
+
+class Welcomescreen extends StatefulWidget {
   const Welcomescreen({super.key});
+
+  @override
+  State<Welcomescreen> createState() => _WelcomescreenState();
+
+}
+
+class _WelcomescreenState extends State<Welcomescreen> {
+  bool showLoginForm = false;
+  String selectedLogin = "Email";
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +77,7 @@ class Welcomescreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                       ),
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Loginscreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SmartLoginUI()));
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -91,7 +102,9 @@ class Welcomescreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                       ),
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Singupscreen()));
+                        setState(() {
+                          showLoginForm = true;
+                        });
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -116,6 +129,7 @@ class Welcomescreen extends StatelessWidget {
                       style: TextStyle(fontSize: 12),textAlign: TextAlign.center,),
                   ],
                 ),
+
               )
 
             ],
@@ -125,4 +139,5 @@ class Welcomescreen extends StatelessWidget {
     );
   }
 }
+
 
