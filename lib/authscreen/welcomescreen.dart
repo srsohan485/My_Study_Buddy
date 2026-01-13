@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mystudybuddy/authscreen/loginscreen.dart';
+import 'package:mystudybuddy/authscreen/singupscreen.dart';
 
 
 class Welcomescreen extends StatelessWidget {
@@ -64,7 +66,7 @@ class Welcomescreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                       ),
                       onPressed: () {
-                        // তোমার কাজ
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Loginscreen()));
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -89,7 +91,7 @@ class Welcomescreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                       ),
                       onPressed: () {
-                        // তোমার কাজ
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Singupscreen()));
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
