@@ -11,6 +11,7 @@ class SmartLoginUI extends StatefulWidget {
 class _SmartLoginUIState extends State<SmartLoginUI> {
 
   String selectedLogin = "Email";
+  TextEditingController passwordController=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +137,7 @@ class _SmartLoginUIState extends State<SmartLoginUI> {
                           height: 40,
                           child: ElevatedButton(
                             onPressed: () {},
-                            child: const Text("Login", style: TextStyle(fontSize: 18)),
+                            child: const Text("Log In", style: TextStyle(fontSize: 18)),
                           ),
                         ),
 
@@ -198,7 +199,7 @@ class _SmartLoginUIState extends State<SmartLoginUI> {
                                 Text("No account?"),
                                 TextButton(
                                   onPressed: () {
-                                    // এখানে Sign Up action দাও
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Singupscreen()));
                                   },
                                   child: const Text(
                                     "Sign Up",
