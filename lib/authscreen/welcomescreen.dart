@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mystudybuddy/authscreen/loginscreen.dart';
-import 'package:mystudybuddy/authscreen/singupscreen.dart';
 
-import 'dropdownpage.dart';
 
 
 class Welcomescreen extends StatefulWidget {
