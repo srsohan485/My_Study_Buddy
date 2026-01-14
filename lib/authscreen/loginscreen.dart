@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mystudybuddy/authscreen/forgotpassword.dart';
 import 'package:mystudybuddy/authscreen/singupscreen.dart';
+
 
 class SmartLoginUI extends StatefulWidget {
   const SmartLoginUI({super.key});
@@ -119,12 +121,13 @@ class _SmartLoginUIState extends State<SmartLoginUI> {
                           alignment: Alignment.centerRight,
                           child: TextButton(
                             onPressed: () {
-                              // Forgot password action এখানে লিখো
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Forgotpassword()));
                             },
                             child: const Text(
                               "Forgot Password?",
                               style: TextStyle(color: Colors.yellow),
                             ),
+
                           ),
                         ),
 
