@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mystudybuddy/authscreen/forgotpassword.dart';
+import 'package:mystudybuddy/codevarificationpages/forgotpassword.dart';
 import 'package:mystudybuddy/authscreen/singupscreen.dart';
 
 

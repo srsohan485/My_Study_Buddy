@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mystudybuddy/homepagedesign/homepage.dart';
 class Continuepage extends StatelessWidget {
   const Continuepage({super.key});
 
@@ -64,7 +65,7 @@ class Continuepage extends StatelessWidget {
                         height: 56,
                         child: ElevatedButton(
                           onPressed: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context)=>Continuepage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Homepage()));
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFFB8AEE0),
